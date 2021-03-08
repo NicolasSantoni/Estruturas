@@ -1,0 +1,30 @@
+/*
+ * Método que pesquisa e remove public boolean remove(T elemento);
+ */
+package estruturaBasica;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Nicolas
+ */
+public class ex3 {
+    public static void main(String[] args) {
+        Lista nomes = new Lista(1);
+        Scanner lerDados = new Scanner(System.in);
+        String ler;
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Indique o "+(i+1)+"° nome:");
+            ler = lerDados.next();
+            nomes.adiciona(ler);
+        }
+        System.out.println("Indique o nome a ser removido:");
+        ler = lerDados.next();
+        if (nomes.remove(ler)==true) {
+            System.out.println(nomes);
+        }
+        else
+            System.out.println("O nome não existe na lista!");
+    }
+}
